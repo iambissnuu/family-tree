@@ -1,0 +1,34 @@
+Query: Who are the children of john?
+?- child(X, john).
+Expected output:
+X = mary ;
+X = tom ;
+false.
+
+Query: Who are the siblings of mary?
+?- sibling(mary, X).
+Expected output:
+X = tom ;
+false.
+
+Query: Who is the grandparent of sam?
+?- grandparent(X, sam).
+Expected output:
+X = john ;
+X = lisa ;
+false.
+
+Query: Is susan a cousin of linda?
+?- cousin(susan, linda).
+Expected output:
+true.
+
+Query: Who are the descendants of john?
+?- descendant(X, john).
+Expected output:
+X = mary ;
+X = tom ;
+X = susan ;
+X = sam ;
+X = linda ;
+false.
